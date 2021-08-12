@@ -107,10 +107,10 @@ primos = [
 
 print(f"Posição do número 4003: {busca_sequencial(primos, 4003)}")
 print(f"Posição do número 6689: {busca_sequencial(primos, 6689)}")
-print(f"Posição do número 6689: {busca_sequencial(primos, 4500)}")
+print(f"Posição do número 4500: {busca_sequencial(primos, 4500)}")
 print(f"Números de elementos da lista: {len(primos)}")
 
-busca = "Orkutilson"
+busca = 'Orkutilson'
 
 hora_ini = time()
 print(f"Posição de FAUSTO: {busca_sequencial(nomes, 'FAUSTO')}")
