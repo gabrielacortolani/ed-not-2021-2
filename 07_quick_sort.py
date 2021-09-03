@@ -77,7 +77,7 @@ print(f"Passadas: {passadas}, comps: {comps}, trocas: {trocas}")
 from data.nomes_desord import nomes
 from time import time
 import tracemalloc
-#import psutil
+import psutil
 
 passadas = 0
 comps = 0
@@ -100,4 +100,4 @@ print(f"Passadas: {passadas}, comparações: {comps}, trocas: {trocas}")
 #print(f"Pico de memória: {mem_pico / 1024 / 1024}MB")
 
 #tracemalloc.stop()  #Finaliza a mediação do consumo de memória
-#print('RAM memory % used:', psutil.virtual_memory()[2])
+print('RAM memory % used:', psutil.virtual_memory()[2])
