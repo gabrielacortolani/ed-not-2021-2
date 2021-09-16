@@ -102,7 +102,7 @@ triangulo1 = FormaGeometrica(6.4, 9, "T")
 
 print(f"Área de uma forma {retangulo1.tipo} de {retangulo1.base} x {retangulo1.altura}: {retangulo1.calc_area()}")
 
-print(f"Área de uma forma {triangulo1.tipo} de {triangulo1.base} x {triangulo1.altura}: {triangulo1.calc_area()}")
+print(f"Área de uma forma {triangulo1.tipo} de {triangulo1.base} x {triangulo1.altura}: {triangulo1.calc_area}")
 
 # retangulo1.__base = 5
 # retangulo1.set_base(9.6)
