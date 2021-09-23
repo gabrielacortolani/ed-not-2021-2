@@ -26,9 +26,6 @@ def verif_fechamento(tipo_fecha, pos_fecha, dados_abre):
         print(f"ERRO: há mais símbolos de fechamento que símbolos de abertura na expressão")
     if dados_abre["tipo"] == tipo_fecha:
         print(f"Símbolo tipo {tipo_fecha} aberto na posição {dados_abre['pos']} e fechado na posição {pos_fecha}")
-    
-    elif dados_abre["tipo"] == tipo_fecha:
-        print(f"Símbolo tipo {tipo_fecha} aberto na posição {dados_abre['pos']} e fechado na posição {pos_fecha}")
     else: # Tipos errados
         print(f"ERRO: símbolo de fechamento do tipo {tipo_fecha} encontrado na posição {pos_fecha}; esperado símbolo do tipo {dados_abre['tipo']}")
 
