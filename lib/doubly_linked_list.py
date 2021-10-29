@@ -74,7 +74,7 @@ class DoublyLinkedList:
     def index(self, val):
         # Encontra a posição do meio da lista. Se o resultado for
         # fracionário, considera p próximo número inteiro
-        meio = math.ceil(self.count / 2)
+        meio = math.ceil(self.__count / 2)
 
         # Inicializa dois nodos, um com a cabeça e outro com a cauda
         # da lista
@@ -82,7 +82,8 @@ class DoublyLinkedList:
         node2 = self.__tail
 
         # Contador que vai até a metade da lista 
-        for pos in range(0, meio + 1):
+        for pos in range(0, meio):
+            # print(f'>> Pos: {pos}, node1: {node1.data}, node2: {node2.data}')
             if (node1.data == val): return pos # retorna a posição encontrada
             if(node2.data == val): return self.__count - 1 - pos # retorna posição retroativa
             node1 = node1.next # node1 amda para frente
@@ -164,7 +165,7 @@ class DoublyLinkedList:
             # Será removido o __tail da lista
             removed = self.__tail
             # O novo __tail passa ser o nodo anterior ao removido
-            self.__tail = removed.preved.prev
+            self.__tail = removed.prev
             # Se __tail for um nodo válido, ele não pode ter sucessor (next)
             if self.__tail is not None: self.__tail.next = None
             # Em caso de remoção do único nodo restante, __tail é None,
@@ -239,17 +240,7 @@ class DoublyLinkedList:
 lista = DoublyLinkedList()
 print(lista.to_str())
 
-# Inserção em lista vazia
-lista.insert(0, 'Fusca')
-print(lista.to_str())
-
-# Inserção no início da lista 
-lista.insert(0, 'Chevette')
-print(lista.to_str())
-
-# Inserção no final da lista
-lista.insert(3, 'Maverick')
-print(lista.to_str())
+# Inserção e))
 
 # Inserção no final da lista (2)
 lista.insert(4, 'Opala')
@@ -284,5 +275,22 @@ print(lista.to_str())
 
 # Consulta o último nodo
 ultimo = lista.peek_tail()
-print(f"Removido nodo consultado: {removido}")
+print(f"Último nodo consultado: {ultimo}")
 print(lista.to_str())
+
+# Inserção adicionais no final da lista
+lista.insert_tail('Passat')
+lista.insert_tail('Fiorino')
+lista.insert_tail('Variant')
+lista.insert_tail('Escort')
+lista.insert_tail('Del Rey')
+print(lista.to_str())
+
+# Testando index
+idxCorcel = lista.index('Corcel')
+idxVariant = lista.index('Variant')
+idxEscort = lista.index('Escort')
+idxGol = lista.index('Gol')
+idxChevette = lista.index('Chevette')
+idxPassat = lista.index('Passat')
+print(f"Posições: Corcel: {idxCorcel}, Variant: {idxVariant}, Escort: {idxEscort}, Gol: {idxGol}, Chevette: {idxChevette}, Passat: {idxPassat}")
