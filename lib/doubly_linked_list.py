@@ -149,7 +149,7 @@ class DoublyLinkedList:
 
         # 2º caso: remoção do início da lista 
         if pos == 0:
-            # Será removido o __fead da lista
+            # Será removido o __head da lista
             removed = self.__head
             # O novo __head passa a ser o nodo seguinte ao removido
             self.__head = removed.next
@@ -273,7 +273,7 @@ print(f"Removido primeira posição: {removido}")
 print(lista.to_str())
 
 # Remoção do último nodo
-removido = lista.remove(lista.count() - 1)
+removido = lista.remove(lista.count() -1)
 print(f"Removido última posição: {removido}")
 print(lista.to_str())
 
